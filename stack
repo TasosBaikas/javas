@@ -1,0 +1,29 @@
+public class stack {
+    private final int SIZE=10;
+    private int[] stack2 = new int[SIZE];
+    private int top=-1;
+
+
+    public void push(int val){
+        if(top < SIZE){
+            top++;
+            stack2[top] = val;
+        }
+    }
+
+    public int pop(){
+        if (top>=0){
+            int retur = stack2[top];
+            top--;
+            return retur;
+        }
+        return -1;
+    }
+
+    public boolean empty(){
+        if (top== -1)
+            return true;
+        else
+            return false;
+    }
+}
